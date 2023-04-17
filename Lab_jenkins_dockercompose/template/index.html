@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รู้ลิมิต | คำนวณ</title>
+    <link rel="icon" type="image/x-icon" href="./image/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/30c46c336b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="index.html" class="navbar-item has-text-weight-bold">
+                    ตำนวณ
+                </a>
+
+                <a href="data.html" class="navbar-item has-text-weight-bold">
+                    ข้อมูล
+                </a>
+                <a href="about_us.html" class="navbar-item has-text-weight-bold">
+                    เกี่ยวกับเรา
+                </a>
+            </div>
+            <div class="navbar-end">
+                <a href="index.html">
+                    <img id="logo_icon" src="./image/logo.png" alt="logo" class="logo is-pulled-right" id="logo" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container" id="content">
+        <div class="columns">
+            <div class="column">
+                <div class="sex" id="sex">
+                    <label class="label is-size-4">เพศ</label>
+                    <label class="radio is-size-4">
+                        <input type="radio" name="sex" id="male">
+                        ชาย
+                    </label>
+                    <label class="radio is-size-4">
+                        <input type="radio" name="sex" id="female">
+                        หญิง
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-4">
+                <div class="weight">
+                    <label class="label is-size-4">น้ำหนัก</label>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="weight" class="input" type="tel" placeholder="น้ำหนักของคุณ">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-weight-scale"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                กก.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="columns content_from">
+                    <div class="column is-2 pt-6 image">
+                        <img src="./image/alcohol.png">
+                    </div>
+                    <div class="column is-5 ml-6 mt-5" id="content_liquor">
+                        <label class="label">สุรา</label>
+                        <div class="size mt-5 ">
+                            จำนวน
+                            <input id="quantity_liquor" class="ml-2 mr-2 has-text-centered" size="1" type="text" value="0">
+                            <select id="type_liquor" class=" is-dark">
+                                <option>Flat</option>
+                                <option>Round</option>
+                            </select>
+                        </div>
+                        <div class="Amount_of_alcohol mt-4">
+                            ปริมาณแอลกอฮอล์
+                            <input id="percent_liquor" class="ml-2 mr-2 has-text-centered" type="text" value="35" size="1">
+                            %
+                        </div>
+                    </div>
+                    <div class="column is-5 has-text-centered mt-6">
+                        <div class="is-size-4">ผลลัพธ์</div>
+                        <p id="result_liquor" class="is-size-4">0</p>
+                        <div class="is-size-4">กรัม</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="columns content_from">
+                    <div class="column is-2 image">
+                        <img id="beer" src="./image/beer.png">
+                    </div>
+                    <div class="column is-5 ml-6 mt-5" id="content_beer">
+                        <label class="label">เบียร์</label>
+                        <div class="size mt-5 ">
+                            จำนวน
+                            <input id="quantity_beer" class="ml-2 mr-2 has-text-centered" type="text" value="0" size="1">
+                            <select id="type_beer" class=" is-dark" id="">
+                                <option>Can</option>
+                                <option>Bottle</option>
+                            </select>
+                        </div>
+                        <div class="Amount_of_alcohol mt-4">
+                            ปริมาณแอลกอฮอล์
+                            <input id="percent_beer" class="ml-2 mr-2 has-text-centered" type="text" value="5" size="1">
+                            %
+                        </div>
+                    </div>
+                    <div class="column is-5 has-text-centered mt-6">
+                        <div class="is-size-4">ผลลัพธ์</div>
+                        <p id="result_beer" class="is-size-4">0</p>
+                        <div class="is-size-4">กรัม</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="columns content_from">
+                    <div class="column is-2 image">
+                        <img src="./image/wine.png">
+                    </div>
+                    <div class="column is-5 ml-6 mt-5" id="content_wine">
+                        <label class="label">ไวน์</label>
+                        <div class="size mt-5 ">
+                            จำนวน
+                            <input id="quantity_wine" class="ml-2 mr-2 has-text-centered" type="text" value="0" size="1">
+                            <select id="type_wine" class=" is-dark" id="">
+                                <option>Demi</option>
+                                <option>Standard</option>
+                                <option>Magnum</option>
+                            </select>
+                        </div>
+                        <div class="Amount_of_alcohol mt-4">
+                            ปริมาณแอลกอฮอล์
+                            <input id="percent_wine" class="ml-2 mr-2 has-text-centered" type="text" value="10" size="1">
+                            %
+                        </div>
+                    </div>
+                    <div class="column is-5 has-text-centered mt-6">
+                        <div class="is-size-4">ผลลัพธ์</div>
+                        <p id="result_wine" class="is-size-4">0</p>
+                        <div class="is-size-4">กรัม</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button is-danger is-rounded mr-3" onclick="reset_default()">คืนค่าเริ่มต้น</button>
+
+            <a href="#content_result"><button class="button is-primary is-rounded" onclick="cal()">คำนวณ</button></a>
+        </div>
+        <div id="content_result" class="box mt-6 has-text-centered has-text-white">
+            <img src="./image/icon.png"/>
+            <div class="is-size-3">
+                <p id="ans">0 กรัม</p>
+            </div>
+            <div id="description_result" class="is-size-5">ไม่มีแอลกอฮอล์ในเลือด</div>
+            <div id="behavior_result" class="is-size-6 mt-2">รู้สึกปกติ ไม่มีอาการเมา </div>
+            <div class="mt-5">
+                <a href="data.html">
+                    <button class="button mt-3 is-rounded">ดูรายละเอียดเพิ่มเติม</button>
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
