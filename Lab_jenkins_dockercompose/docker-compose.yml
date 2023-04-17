@@ -1,25 +1,10 @@
-# version is now using "compose spec"
-# v2 and v3 are now combined!
-# docker-compose v1.27+ required
+
+version: '3.3'
 
 services:
 
   frontend:
-    build: ./web/frontend
-    image: baspop01/frontend:1.0
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://54.205.151.239"]
-      interval: 15s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
+    build: ./web/frontend 
+    image: baspop01/webfrontend:1.0  
     ports:
       - "8081:8081"
-    environment:
-      - APP_IMAGE=building.jpg
-    networks:
-      - front-tier
-      - back-tier
-networks:
-  front-tier:
-  back-tier:
