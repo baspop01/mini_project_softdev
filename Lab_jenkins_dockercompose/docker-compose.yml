@@ -1,9 +1,11 @@
+
 version: '3.3'
 
 services:
 
   frontend:
     build: ./Frontend
-    image: baspop01/webfrontend:1.0  
+    image: 63070055/webfrontend:1.0  
     ports:
       - "8081:8081"
+ 
