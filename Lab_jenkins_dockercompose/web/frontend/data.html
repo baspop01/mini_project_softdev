@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>รู้ลิมิต | ข้อมูล</title>
-    <link rel="icon" type="image/x-icon" href="./image/icon.png">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icon.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/30c46c336b.js" crossorigin="anonymous"></script>
@@ -19,7 +18,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a href="index.html" class="navbar-item has-text-weight-bold">
+                <a href="/" class="navbar-item has-text-weight-bold">
                     คำนวณ
                 </a>
 
@@ -31,8 +30,8 @@
                 </a>
             </div>
             <div class="navbar-end">
-                <a href="index.html">
-                    <img id="logo_icon" src="./image/logo.png" alt="logo" class="logo is-pulled-right" id="logo" />
+                <a href="/">
+                    <img id="logo_icon" src="{{ url_for('static', filename='logo.png    ') }}" alt="logo" class="logo is-pulled-right" id="logo" />
                 </a>
             </div>
         </div>
@@ -47,7 +46,7 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-covered">
-                                <img src="./image/data_image_1.jpeg" alt="">
+                                <img src="{{ url_for('static', filename='data_image_1.jpeg') }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -83,7 +82,7 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-covered">
-                                <img src="./image/data_image_2.jpeg" alt="">
+                                <img src="{{ url_for('static', filename='data_image_2.jpeg') }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -107,7 +106,7 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-covered">
-                                <img src="./image/data_image_3.jpeg" alt="">
+                                <img src="{{ url_for('static', filename='data_image_3.jpeg') }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -119,7 +118,63 @@
     </div>
     <br>
 
-    <script src="./script.js"></script>
+    <style>
+        /* font */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Serif&family=Rubik&display=swap');
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'PT Serif', serif;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        /* backgrond */
+        body {
+            background-color: #EEE5D2;
+            background-image: url("https://studyfinds.org/wp-content/uploads/2022/03/paolo-bendandi-2kLHSCnMQZ8-unsplash-scaled.jpg");
+            background-color: rgba(238, 229, 210, 0.90);
+            background-blend-mode: lighten;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%
+        }
+
+        #content {
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 2%;
+        }
+
+        #beer {
+            padding-top: 20%;
+        }
+
+        #content_liquor {
+            padding-left: 8%;
+        }
+
+        #content_beer {
+            padding-left: 8%;
+        }
+
+        #content_wine {
+            padding-left: 8%;
+        }
+
+        #content_result {
+            background-color: grey;
+        }
+
+        /* .image{
+  
+} */
+        #logo_icon {
+            width: 30%;
+
+        }
+    </style>
 </body>
 
 </html>

@@ -4,6 +4,6 @@ services:
 
   frontend:
     build: ./web/frontend 
-    image: rosjana63070145/webfrontend:1.0  
+    image: baspop01/webfrontend:1.0  
     ports:
       - "8081:8081"
